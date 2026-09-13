@@ -1,0 +1,20 @@
+mark = 0.0
+highest = 0.0
+lowest = 6.0
+average = 0.0
+total = 0.0
+
+for i in range(6):
+    mark = float(input("What judge number " + str(i+1) + "'s mark? "))
+    total = total + mark
+    if mark > highest:
+                 highest = mark
+    if mark < lowest:
+                 lowest = mark
+
+total = total - (highest + lowest)
+average = total/4
+
+print("Highest: " + str(highest))
+print("Lowest: " + str(lowest))
+print("Final Mark: " + str(round(average,1)))
